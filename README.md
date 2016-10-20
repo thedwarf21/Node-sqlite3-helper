@@ -155,9 +155,9 @@ myDbObject.select(["col1 as c1", "col2"],           //columns of the SELECT clau
                   true,                             //if true sends the hole recordset to the callback, either callback is called for each row. 
                   function (recordset) { 
   //whatever you want to do for each row.
-}, function(err) {
+}, function(sql, err) {
   //whatever you want to do in case of error.
-  console.log(err); //for example
+  console.log(sql + "\n" + err); //for example
 });
 ```
 
@@ -170,9 +170,9 @@ myDbObject.getFromSQL(sql_code,   //sql code
                       true,       //if true, sends the hole recordset to the callback, either callback is called for each row.
                       function (recordset) (recordset) { 
   //whatever you want to do for each row.
-}, function(err) {
+}, function(sql, err) {
   //whatever you want to do in case of error.
-  console.log(err); //for example
+  console.log(sql + "\n" + err); //for example
 }); 
 ```
 
