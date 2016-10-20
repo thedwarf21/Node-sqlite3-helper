@@ -32,10 +32,10 @@ A simple method to create a table.
 let myDbObject = new bdd.SQLiteConnection("myDatabase");
 
 // Now let's create a table.
-myDbObject.createTable("myTable", 			      //table name.
-		["col1", "col2", "col3", "col4"],	    //column names.
+myDbObject.createTable("myTable", 			     //table name.
+		["col1", "col2", "col3", "col4"],	     //column names.
 		["INTEGER", "TEXT", "DATETIME", "TEXT"], //column types.
-		[false, true, true,true], 		//not null. (will add the 'NOT NULL' keywords in the query if true).
+		[false, true, true,true],         //not null. (will add the 'NOT NULL' keywords in the query if true).
 		[true, true, false, false],	 	//unique. (will add the 'UNIQUE' keyword in the query if true).
 		[null, null, null, null], 		//default values.
 		["col1"],	 			//primary key field(s). (integer primary keys result in autoincrement to sqlite)
