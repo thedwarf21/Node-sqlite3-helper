@@ -32,15 +32,15 @@ A simple method to create a table.
 let myDbObject = new bdd.SQLiteConnection("myDatabase");
 
 // Now let's create a table.
-myDbObject.createTable("myTable", 							      //table name.
-		["col1", "col2", "col3", "col4"],	          //column names.
-		["INTEGER", "TEXT", "DATETIME", "TEXT"],		//column types.
-		[false, true, true,true], 							    //not null. (will add the 'NOT NULL' keywords in the query if true).
-		[true, true, false, false],	 						    //unique. (will add the 'UNIQUE' keyword in the query if true).
-		[null, null, null, null], 							    //default values.
-		["col1"],	 			  							            //primary key field(s). (integer primary keys result in autoincrement to sqlite)
-		["ASC"], 											              //primary key field(s) reading order.
-		["col2"], ["other_table(col)"]);            //foreign key and foreign key references.
+myDbObject.createTable("myTable", 			//table name.
+		["col1", "col2", "col3", "col4"],	//column names.
+		["INTEGER", "TEXT", "DATETIME", "TEXT"],//column types.
+		[false, true, true,true], 		//not null. (will add the 'NOT NULL' keywords in the query if true).
+		[true, true, false, false],	 	//unique. (will add the 'UNIQUE' keyword in the query if true).
+		[null, null, null, null], 		//default values.
+		["col1"],	 			//primary key field(s). (integer primary keys result in autoincrement to sqlite)
+		["ASC"], 				//primary key field(s) reading order.
+		["col2"], ["other_table(col)"]);        //foreign key and foreign key references.
 ```
 
 ### dropTable
@@ -58,11 +58,11 @@ myDbObject.dropTable("myTable");
 Inserts a row.
 
 ```
-myDbObject.insertInto("myTable",   		//table name.
-		      ["col1", "col2"],        		//column names.
-		      ["'value'", null],		      //values.
-		      null,                       //callback.
-          true);					            //ignore error: if already exists, ignore without prompting.
+myDbObject.insertInto("myTable",   	//table name.
+		      ["col1", "col2"], //column names.
+		      ["'value'", null],//values.
+		      null,             //callback.
+          true);			//ignore error: if already exists, ignore without prompting.
 ```
 
 ### update
@@ -70,11 +70,11 @@ myDbObject.insertInto("myTable",   		//table name.
 Updates a row or a set of rows.
 
 ```
-myDbObject.update("myTable",      		//table name.
-		      ["col1", "col2"],        		//column names.
-		      ["'value'", null],		      //values.
-		      "col3 = '12'",              //where expression.
-          false);					            //ignore error: if true, ignore errors without prompting.
+myDbObject.update("myTable",      	//table name.
+		      ["col1", "col2"], //column names.
+		      ["'value'", null],//values.
+		      "col3 = '12'",    //where expression.
+          	      false);		//ignore error: if true, ignore errors without prompting.
 ```
 
 ### deleteFrom
@@ -83,7 +83,7 @@ Deletes a row or a set of rows.
 
 ```
 myDbObject.delete("myTable",      		//table name.
-		      "col3 = '12'");             //where expression.
+		      "col3 = '12'");           //where expression.
 ```
 
 ### executeQuery
