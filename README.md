@@ -59,10 +59,10 @@ Inserts a row.
 
 ```
 myDbObject.insertInto("myTable",   	//table name.
-		      ["col1", "col2"], //column names.
-		      ["'value'", null],//values.
-		      null,             //callback.
-          true);			//ignore error: if already exists, ignore without prompting.
+		      ["col1", "col2"],     //column names.
+		      ["'value'", null],    //values.
+		      null,                 //callback.
+          true);			        //ignore error: if already exists, ignore without prompting.
 ```
 
 ### update
