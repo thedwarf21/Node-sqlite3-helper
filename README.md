@@ -58,11 +58,20 @@ myDbObject.dropTable("myTable");
 Inserts a row.
 
 ```
+//for initialization inserts.
 myDbObject.insertInto("myTable",   	//table name.
 		      ["col1", "col2"],     //column names.
 		      ["'value'", null],    //values.
 		      null,                 //callback.
           true);			        //ignore error: if already exists, ignore without prompting.
+
+//or for most cases.
+myDbObject.insertInto("myTable", ["col1", "col2"], ["'value'", null], function(err, context) {
+  if(err) console.log(context + "\n" + err); //in case of error the context contains sql code of the query.
+  else {
+    //otherwise, the context contains the rowid of the inserted row.
+  }
+}
 ```
 
 ### update
