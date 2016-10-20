@@ -36,10 +36,10 @@ myDbObject.createTable("myTable", 			     //table name.
 		["col1", "col2", "col3", "col4"],	     //column names.
 		["INTEGER", "TEXT", "DATETIME", "TEXT"], //column types.
 		[false, true, true,true],                //not null. (will add the 'NOT NULL' keywords in the query if true).
-		[true, true, false, false],	 	 //unique. (will add the 'UNIQUE' keyword in the query if true).
-		[null, null, null, null], 		 //default values.
-		["col1"],	 			 //primary key field(s). (integer primary keys result in autoincrement to sqlite)
-		["ASC"], 				 //primary key field(s) reading order.
+		[true, true, false, false],	 	         //unique. (will add the 'UNIQUE' keyword in the query if true).
+		[null, null, null, null], 		         //default values.
+		["col1"],	 			                 //primary key field(s). (integer primary keys result in autoincrement to sqlite)
+		["ASC"], 				                 //primary key field(s) reading order.
 		["col2"], ["other_table(col)"]);         //foreign key and foreign key references.
 ```
 
